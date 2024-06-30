@@ -7,14 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="1.png" alt="shoes" class="main-img">
+    <img src="1.png" alt="shoes" class="main-img" id="main-img">
 
     <div class="product-img-container">
-        <img src="1.png" alt="shoes" class="product-img">
-        <img src="2.png" alt="shoes" class="product-img">
-        <img src="3.png" alt="shoes" class="product-img">
-        <img src="4.png" alt="shoes" class="product-img">
-        <img src="5.png" alt="shoes" class="product-img">
+        <img src="1.png" alt="shoes" class="product-img" onclick="changeimg(1)">
+        <img src="2.png" alt="shoes" class="product-img" onclick="changeimg(2)">
+        <img src="3.png" alt="shoes" class="product-img" onclick="changeimg(3)">
+        <img src="4.png" alt="shoes" class="product-img" onclick="changeimg(4)">
+        <img src="5.png" alt="shoes" class="product-img" onclick="changeimg(5)">
     </div>
+
+    <script>
+        function changeimg(num){
+            const img = document.getElementById("main-img")
+
+            if(num==1){
+                img.src = "./1.png"
+            }
+            else if (num==2){
+                img.src = "./2.png"
+            }
+            else if (num==3){
+                img.src = "./3.png"
+            }
+            else if (num==4){
+                img.src = "./4.png"
+            }
+            else{
+                img.src = "./5.png"
+            }
+        }
+    </script>
 </body>
 </html>
